@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useWorkflow } from '../hooks/useWorkflowState.jsx'
 import useAutomations from '../hooks/useAutomationActions.js'
-//import '../Styles/PropertiesPanel.css'
+import '../PropertiesPanel.css'
 
 export default function PropertiesPanel() {
   const { nodes, selectedNodeId, setNodeData } = useWorkflow()
@@ -43,19 +43,28 @@ export default function PropertiesPanel() {
           />
         </div>
 
-        {local._type === 'start' && (
-          <div className="formRow">
-            <label>Metadata (JSON)</label>
-            <textarea 
-              className="inputField"
-              value={JSON.stringify(local.metadata || {})}
-              onChange={e => {
-                try { update('metadata', JSON.parse(e.target.value)) } catch {}
-              }}
-            />
-            <div className="helpText">Example: {"{ \"department\": \"HR\" }"}</div>
-          </div>
+        {local._type === "start" && (
+  <div className="formRow">
+    <label>Metadata (JSON)</label>
+
+    <textarea
+      className="inputField"
+      value={local._metadataText}
+      onChange={(e) => {
+        update("_metadataText", e.target.value); 
+      }}
+      onBlur={() => {
+        try {
+          const parsed = JSON.parse(local._metadataText);
+          update("metadata", parsed); 
+        } catch {
+          alert("Invalid JSON format! Please fix it.");
+        }
+      }}
+    />
+    </div>
         )}
+
 
         {local._type === 'task' && (
           <>

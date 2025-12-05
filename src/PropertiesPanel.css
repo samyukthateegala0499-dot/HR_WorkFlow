@@ -1,0 +1,91 @@
+.panelContainer {
+  padding: 18px;
+  background: #f9fafb;
+  border-left: 1px solid #e2e8f0;
+  height: 100%;
+  overflow-y: auto;
+  font-family: Inter, sans-serif;
+}
+
+.panelContainer.empty {
+  text-align: center;
+  padding-top: 40px;
+}
+
+.panelTitle {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #1e293b;
+}
+
+.panelHint {
+  color: #64748b;
+  font-size: 14px;
+}
+
+.propertyCard {
+  background: white;
+  border: 1px solid #e2e8f0;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+
+.formRow {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
+.formRow label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #334155;
+  margin-bottom: 4px;
+}
+
+.inputField {
+  padding: 8px 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color .15s;
+}
+
+.inputField:focus {
+  border-color: #6366f1;
+}
+
+textarea.inputField {
+  min-height: 70px;
+}
+
+.checkboxRow {
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.helpText {
+  font-size: 12px;
+  color: #64748b;
+}
+
+.saveButton {
+  width: 100%;
+  margin-top: 16px;
+  padding: 10px;
+  background: #6366f1;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background .15s;
+}
+
+.saveButton:hover {
+  background: #4f46e5;
+}
