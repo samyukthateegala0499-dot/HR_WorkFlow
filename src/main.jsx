@@ -1,11 +1,15 @@
-// src/main.jsx
 import React from 'react'
-import ReactDOM from 'react-dom/client'
+import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)
+// Starting msvc worker in development mode
+if (import.meta.env.DEV) {
+  import('./mocks/browser.js').then(({ setupMocks }) => {
+    setupMocks().then(() => {
+      createRoot(document.getElementById('root')).render(<App />)
+    })
+  })
+} else {
+  createRoot(document.getElementById('root')).render(<App />)
+}
