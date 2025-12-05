@@ -2,6 +2,8 @@ import React from 'react'
 import { ReactFlowProvider } from 'reactflow'
 import FlowCanvas from './FlowCanvas.jsx'
 import { WorkflowProvider } from '../hooks/useWorkflowState.jsx'
+import Sidebar from './Sidebar.jsx'
+import PropertiesPanel from './PropertiesPanel.jsx'
 
 export default function WorkflowBuilder(){
   return (

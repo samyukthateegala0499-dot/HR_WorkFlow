@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useWorkflow } from '../hooks/useWorkflowState.jsx'
-import useAutomations from '../hooks/useAutomationAction.js'
+import useAutomations from '../hooks/useAutomationActions.js'
 //import '../Styles/PropertiesPanel.css'
 
 export default function PropertiesPanel() {
