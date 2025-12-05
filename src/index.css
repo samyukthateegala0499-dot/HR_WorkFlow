@@ -1,0 +1,23 @@
+/* src/index.css */
+@import 'reactflow/dist/style.css';
+
+:root{
+  --bg:#f6f7fb; --panel:#fff; --muted:#6b7280; --accent:#2563eb; --danger:#ef4444;
+}
+
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,Arial;background:var(--bg);color:#111827;height:100vh}
+.app{display:flex;height:100vh}
+.left{width:220px;padding:12px;background:var(--panel);border-right:1px solid #e6e9ef}
+.center{flex:1;display:flex;flex-direction:column}
+.header{height:56px;display:flex;align-items:center;padding:0 16px;border-bottom:1px solid #eee;background:var(--panel)}
+.canvasWrap{flex:1;display:flex}
+.canvas{flex:1;min-height:0}
+.right{width:360px;padding:12px;background:var(--panel);border-left:1px solid #e6e9ef;overflow:auto}
+.paletteItem{padding:10px;margin-bottom:8px;border-radius:8px;background:#f3f6fb;cursor:grab}
+.small{font-size:12px;color:var(--muted)}
+.sectionTitle{font-weight:600;margin-bottom:8px}
+.input{padding:8px;border-radius:6px;border:1px solid #e6e9ef;width:100%}
+.button{padding:8px 12px;border-radius:8px;background:var(--accent);color:white;border:none;cursor:pointer}
+.nodeCard{padding:8px;background:white;border-radius:6px;border:1px solid #eef2f6}
+.log{padding:8px;background:white;border-radius:6px;border:1px solid #eef2f6;max-height:300px;overflow:auto}

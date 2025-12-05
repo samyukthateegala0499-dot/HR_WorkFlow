@@ -1,0 +1,10 @@
+// src/App.jsx
+import React from 'react'
+
+export default function App(){
+  return (
+    <div className="App">
+      <h1>Hello World</h1>
+    </div>
+  )
+}
